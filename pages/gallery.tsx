@@ -5,7 +5,7 @@ import NavBar from "@/components/NavBar";
 export default function Home() {
   return (
     <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-      <title>Goat Village - 主页</title>
+      <title>Goat Village - 作品集</title>
       {/* Header */}
       <NavBar />
       <section className={`flex flex-col items-center justify-center w-full`}>
