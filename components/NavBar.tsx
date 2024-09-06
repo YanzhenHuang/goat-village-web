@@ -33,8 +33,8 @@ const NavBar = () => {
     return (
         <div className={`
         flex flex-row w-full sticky top-0 z-50 p-3 
-        items-center justify-between 
-        bg-white text-black border drop-shadow-md`}>
+        items-center justify-between
+        bg-white/80 backdrop-blur-2xl text-black border drop-shadow-md`}>
             {/* Logo & Hamburger Button */}
             <div className={`flex flex-row items-center max-[640px]:w-full justify-between`}>
                 {/* Logo */}
