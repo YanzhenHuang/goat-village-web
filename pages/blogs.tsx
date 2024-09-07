@@ -12,36 +12,23 @@ import { gpz_texts } from "@/public/blogs/gpz"
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <main className="flex flex-col items-center sm:items-start">
       <title>Goat Village - 博客</title>
       {/* Header */}
       <NavBar />
-      <section className={`flex flex-wrap pl-5 py-16 items-center w-full min-h-[50vh]`}>
-        <StaggeredSection direction={`left`}>
-          {/* 标题-文字 */}
-          <TitledTextBlock
-            content={{
-              title: "羊村出行",
-              annotation: "[IP属地] 中国香港",
-              text: gpz_texts[0]
-            }}
-            direction={`left`} />
-
-          <ImageGallery
-            galleryRootDir={`../images/photos/index/travel/`}
-            imageFileNames={
-              shuffle([
-                `depart.jpg`,
-                `dock.jpg`,
-                `gpz_sleep.jpg`,
-                `hk_road.jpg`,
-                `hk_street.jpg`,
-                `lrx_icecream_car.jpg`,
-                `lrx_sleep.jpg`])
-            }
-            bigImgPos={{ x: "right" }} />
-        </StaggeredSection>
-
+      <section className={`flex flex-wrap px-5 py-16 items-center justify-center w-full min-h-[50vh]`}>
+        <div className={`p-8 bg-white drop-shadow-xl whitespace-pre-line max-w-[120vh] rounded-xl`}>
+          <div className={`flex flex-col gap-2`}>
+            <div className={`flex flex-row items-center justify-between`}>
+              <h1 className={`font-bold text-2xl`}>台风小记</h1>
+              <p className={`opacity-50`}>2024-09-06</p>
+            </div>
+            <h2 className={`opacity-50`}>郭芃泽</h2>
+          </div>
+          <div>
+            <p>{gpz_texts[0]}</p>
+          </div>
+        </div>
       </section>
     </main>
   );
