@@ -4,6 +4,7 @@ import NavBar from "@/components/NavBar";
 import ImageGallery from "@/components/ImageGallery";
 import { shuffle } from "@/utils/func_tools";
 import { TitledTextBlock } from "@/components/TitledTextBlock";
+import { StaggeredSection } from "@/components/StaggeredSection";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       </section>
 
       {/* 羊村编年史 */}
-      <section className={`flex flex-row pl-5 py-16 items-center justify-around w-full min-h-[50vh]`}>
+      <StaggeredSection direction={`left`}>
         {/* 标题-文字 */}
         <TitledTextBlock
           content={{
@@ -48,10 +49,19 @@ export default function Home() {
               `bob_pizza.jpg`])
           }
           bigImgPos={{ x: "left" }} />
-      </section>
+      </StaggeredSection>
 
       {/* 家乡 */}
-      <section className={`flex flex-row pl-5 py-16 items-center justify-around w-full min-h-[50vh]`}>
+      <StaggeredSection direction={`right`}>
+        {/* 标题-文字 */}
+        <TitledTextBlock
+          content={{
+            title: "羊村出行",
+            annotation: "[IP属地] 中国香港",
+            text: `ssss`
+          }}
+          direction={`right`} />
+
         <ImageGallery
           galleryRootDir={`../images/photos/index/travel/`}
           imageFileNames={
@@ -65,16 +75,7 @@ export default function Home() {
               `lrx_sleep.jpg`])
           }
           bigImgPos={{ x: "right" }} />
-
-        {/* 标题-文字 */}
-        <TitledTextBlock
-          content={{
-            title: "羊村出行",
-            annotation: "[IP属地] 中国香港",
-            text: `ssss`
-          }}
-          direction={`right`} />
-      </section>
+      </StaggeredSection>
     </main>
   );
 }
