@@ -14,7 +14,17 @@ export default function Home() {
       <NavBar />
 
       {/* 封面Section */}
-      <section className={`flex flex-col items-center justify-center w-full`}>
+      <section className={`flex flex-col items-center justify-center w-full relative`}>
+        {/* 欢迎cover */}
+        <div className={`
+          absolute flex flex-col w-full h-full items-center justify-center 
+          bg-black/60  animate-[fade-out_1.5s_ease-in-out_forwards]`}>
+          <div>
+            <img src={`../images/goat_village_logo/Goat_Village_Dark_Transparent.png`}
+              className={`flex h-24 w-auto max-[640px]:hidden`} />
+            <p className={`text-white text-center text-2xl`}>欢迎来到羊村！</p>
+          </div>
+        </div>
         <img src={`../images/photos/index/cover.jpg`} className={`w-full h-auto`} />
       </section>
 

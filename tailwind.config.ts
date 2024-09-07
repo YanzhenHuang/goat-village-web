@@ -12,6 +12,12 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        "fade-out": {
+          "70%": { opacity: "100%" },
+          "100%": { opacity: "0%" },
+        },
+      },
     },
   },
   plugins: [],
