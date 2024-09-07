@@ -22,7 +22,7 @@ export default function Home() {
           <div>
             <img src={`../images/goat_village_logo/Goat_Village_Dark_Transparent.png`}
               className={`flex h-24 w-auto max-[640px]:hidden`} />
-            <p className={`text-white text-center text-2xl`}>欢迎来到羊村！</p>
+            <p className={`text-white text-center text-2xl mb-[15vh]`}>欢迎来到羊村！</p>
           </div>
         </div>
         <img src={`../images/photos/index/cover.jpg`} className={`w-full h-auto`} />
