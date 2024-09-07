@@ -8,7 +8,7 @@ import ImageGallery from "@/components/ImageGallery";
 import { shuffle } from "@/utils/func_tools";
 
 
-import {texts} from "@/public/blogs/gpz"
+import { gpz_texts } from "@/public/blogs/gpz"
 
 export default function Home() {
   return (
@@ -16,30 +16,33 @@ export default function Home() {
       <title>Goat Village - 博客</title>
       {/* Header */}
       <NavBar />
-      <StaggeredSection direction={`right`}>
-        {/* 标题-文字 */}
-        <TitledTextBlock
-          content={{
-            title: "羊村出行",
-            annotation: "[IP属地] 中国香港",
-            text: texts[0]
-          }}
-          direction={`right`} />
+      <section className={`flex flex-wrap pl-5 py-16 items-center w-full min-h-[50vh]`}>
+        <StaggeredSection direction={`left`}>
+          {/* 标题-文字 */}
+          <TitledTextBlock
+            content={{
+              title: "羊村出行",
+              annotation: "[IP属地] 中国香港",
+              text: gpz_texts[0]
+            }}
+            direction={`left`} />
 
-        <ImageGallery
-          galleryRootDir={`../images/photos/index/travel/`}
-          imageFileNames={
-            shuffle([
-              `depart.jpg`,
-              `dock.jpg`,
-              `gpz_sleep.jpg`,
-              `hk_road.jpg`,
-              `hk_street.jpg`,
-              `lrx_icecream_car.jpg`,
-              `lrx_sleep.jpg`])
-          }
-          bigImgPos={{ x: "right" }} />
-      </StaggeredSection>
+          <ImageGallery
+            galleryRootDir={`../images/photos/index/travel/`}
+            imageFileNames={
+              shuffle([
+                `depart.jpg`,
+                `dock.jpg`,
+                `gpz_sleep.jpg`,
+                `hk_road.jpg`,
+                `hk_street.jpg`,
+                `lrx_icecream_car.jpg`,
+                `lrx_sleep.jpg`])
+            }
+            bigImgPos={{ x: "right" }} />
+        </StaggeredSection>
+
+      </section>
     </main>
   );
 }
