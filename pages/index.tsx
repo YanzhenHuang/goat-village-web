@@ -50,6 +50,7 @@ export default function Home() {
           }
           bigImgPos={{ x: "left" }} />
       </StaggeredSection>
+      
 
       {/* 家乡 */}
       <StaggeredSection direction={`right`}>
